@@ -1,0 +1,29 @@
+import personas.*
+import spa.*
+
+test "testOlivia" {
+	olivia.recibeMasajes()
+	assert.equals(9,olivia.gradoDeConcentracion())
+	
+	spa.atender(olivia)
+	assert.equals(12,olivia.gradoDeConcentracion())
+}
+
+test "testBruno" {
+	bruno.estaPerfecto()
+	assert.equals(true, bruno.estaPerfecto())
+	
+	bruno.mediodiaEnCasa()
+	assert.equals(false, bruno.estaPerfecto())
+}
+
+test "testRamiro"{
+	spa.atender(ramiro)
+	assert.equals(0, ramiro.contractura())
+	
+	ramiro.diaDeTrabajo()
+	assert.equals(true, ramiro.piel())
+	assert.equals(2,ramiro.contractura())
+	
+}
+	
